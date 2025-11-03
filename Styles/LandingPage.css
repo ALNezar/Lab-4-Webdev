@@ -1,210 +1,182 @@
- @font-face {
-     font-family: 'Chubby Relief';
-     src: url('../Assets/fonts/Chubby Relief.ttf') format('truetype');
-     /* My Custom Font */
- }
+@font-face {
+  font-family: 'Chubby Relief';
+  src: url('../Assets/fonts/Chubby Relief.ttf') format('truetype');
+  /* My Custom Font */
+}
 
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- /* CONTAINER */
- .container {
-     display: flex;
-     flex-direction: column;
-     background-color: #000000;
-     height: 100vh;
-     width: 100%;
-     position: relative;
- }
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
 
- /* LOGO AREA */
- .logo {
-     display: flex;
-     flex-direction: row;
-     min-height: 100px;
-     width: 100%;
-     justify-content: center;
-     align-items: center;
- }
+.logo {
+  display: flex;
+  flex-direction: row;
+  min-height: 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 
- .logo :hover {
-     transform: scale(1.2) rotate(-3deg);
- }
+.logo:hover {
+  transform: scale(1.2) rotate(-3deg);
+}
 
- /* NAVIGATION BAR */
- .navigation {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background-color: #000;
-     color: white;
-     padding: 12px 0;
-     font-family: 'Chubby Relief', sans-serif;
-     gap: 183px;
- }
+/* NAVIGATION BAR */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 12px 0;
+  font-family: 'Chubby Relief', sans-serif;
+  gap: 183px;
+}
 
- .navigation a {
-     text-decoration: none;
-     color: #fff;
-     font-size: 50px;
-     transition: transform 0.2s, color 0.2s;
- }
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 50px;
+  transition: transform 0.2s, color 0.2s;
+}
 
- .navigation a:hover {
-     color: #ffcc00;
-     transform: scale(1.2) rotate(-3deg);
- }
+.navigation a:hover {
+  color: #ffcc00;
+  transform: scale(1.2) rotate(-3deg);
+}
+/* NAVIGATION BAR */
 
- /* HEADER */
- .header {
-     display: flex;
-     flex-direction: row;
-     min-height: 100px;
-     width: 100%;
-     margin-top: 10px;
-     justify-content: center;
-     align-items: center;
-     font-family: 'Chubby Relief', sans-serif;
-     font-size: 48px;
-     color: #fff;
- }
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: row;
+  min-height: 100px;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Chubby Relief', sans-serif;
+  font-size: 48px;
+  color: rgb(255, 255, 255)000;
+}
 
- .header p:hover {
-     color: #f02760;
-     transform: scale(1.2) rotate(-3deg);
- }
+.header p:hover {
+  color: #f02760;
+  transform: scale(1.2) rotate(-3deg);
+}
+/* HEADER */
 
- /* CONTENT */
- .content {
-     display: flex;
-     flex-direction: row;
-     min-height: 300px;
-     margin-top: 10px;
-     justify-content: space-between;
-     padding: 0 20px;
-     gap: 20px;
- }
 
+/* SIDE BAR */
 .side_bar {
   position: relative;
-  width: 355px;
-  height: 302px;
+  width: 645px;
+  height: 515px;
+  margin: 20px auto;            
+  
+  display: flex;
+  align-items: center;         
+  justify-content: center;      
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  
   background-image: url("/Assets/Images/Dr House.jpg");
   background-size: cover;
   background-position: center;
-  transition: transform 1s ease; /* controls return-to-normal speed */
-}
+  
+  transition: transform 1s ease; 
 
 /* When hovered → spin once */
 .side_bar:hover {
   animation: spinOnce 2.3s ease;
 }
 
-/* Define the spin animation */
+/* Define spin animation */
 @keyframes spinOnce {
-  
-  50% {
-    transform: rotate(360deg) scale(1.2); /* wheel spin + zoom */
+  0% {
+    transform: rotate(0deg) scale(1);
   }
-  1
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
-
 
 /* Both layers fill the sidebar */
 .side_bar::before,
 .side_bar::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 5s ease; /* fade-in speed */
-    
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Default: before is visible */
+/* Default image */
 .side_bar::before {
-    background-image: url("/Assets/Images/Dr House.jpg");
-    opacity: 1;
-    
+  background-image: url("/Assets/Images/Dr House.jpg");
+  opacity: 1;
+  transition: opacity 0s ease;
 }
 
-/* Hover image starts invisible */
+/* Hover image */
 .side_bar::after {
-    background-image: url("/Assets/Images/House giving death stair.webp");
-    opacity: 0;
-    
+  background-image: url("/Assets/Images/House giving death stair.webp");
+  opacity: 0;
+  transition: opacity 10s ease;
 }
 
-/* Hover: fade in slowly */
+/* Hover: fade in new image */
 .side_bar:hover::after {
-    opacity: 1;
-    transition: opacity 10s ease; /* fade-in duration */
-    
+  opacity: 1;
 }
 
-/* Hover: fade out the old one */
+/* Hover: fade out old image */
 .side_bar:hover::before {
-    opacity: 0;
-    
+  opacity: 0;
 }
 
-/* When hover ends: instantly disappear (no fade-out) */
-.side_bar::after {
-    transition: opacity 0s ease; /* overrides back to instant when unhovered */
+/* When hover ends → instantly disappear (no fade-out) */
+.side_bar:not(:hover)::after {
+  transition: opacity 0s ease;
+  opacity: 0;
 }
 
+/* BODY AREA */
+.body_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 81%;
+  background-color: #000000;  /* Changed to pure black to match your site */
+  color: #fff;
+  font-size: 16px;           /* Slightly larger for better readability */
+  padding: 40px 60px;        /* More generous spacing */
+  border-radius: 0;          /* Remove rounded corners for cleaner look */
+  text-align: center;        /* Center align text to match your layout */
+}
 
- /* SIDE BAR */
-
-
- /* BODY AREA */
- .body_area {
-     display: flex;
-     flex-direction: column;
-     flex-basis: 75%;
-     background-color: #1a1a1a;
-     padding: 30px;
-     border-radius: 10px;
-     color: #fff;
- }
-
- .body_area h2 {
-     margin-bottom: 15px;
-     font-size: 32px;
- }
-
- .body_area h3 {
-     margin-bottom: 10px;
-     font-size: 24px;
- }
-
- .body_area p {
-     color: #ccc;
-     line-height: 1.8;
-     font-size: 16px;
-     margin-bottom: 10px;
- }
-
- .body_area strong {
-     color: #ffcc00;
- }
-
- /* FOOTER */
- .footer {
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: center;
-     margin-top: 10px;
-     min-height: 50px;
-     color: #fff;
-     font-size: 14px;
-     background-color: #1a1a1a;
- }
+/* FOOTER */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
