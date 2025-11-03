@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Information</title>
+<link rel="stylesheet" href="Styles/LandingPage.css">
+<style>
+/* COMIC STYLE PERSONAL INFO PAGE */
+body {
+  margin: 0;
+  font-family: 'Chubby Relief', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.personal_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.personal_header {
+  font-size: 52px;
+  color: #ffcc00;
+  text-align: center;
+  text-shadow: 3px 3px 0 #000, 6px 6px 0 #ff0000;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.personal_window {
+  width: 90%;
+  max-width: 900px;
+  background-color: #1a1a1a;
+  border: 5px solid #ffcc00;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 0 4px #ff0000 inset, 0 0 15px rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Comic halftone background effect */
+.personal_window::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 10px 10px;
+  pointer-events: none;
+}
+
+/* Table styles */
+.personal_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+.personal_table td {
+  padding: 12px;
+  border: 3px solid #ffcc00;
+  transition: all 0.2s;
+}
+
+.label {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.photo {
+  text-align: center;
+}
+
+.photo img {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #ffcc00;
+  border-radius: 10px;
+  margin: 10px 0;
+  transform: rotate(-1deg);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo img:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+/* Comic hover effect on rows */
+.personal_table tr:hover td {
+  background-color: #222;
+  color: #ffcc00;
+  transform: scale(1.03) rotate(-1deg);
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+/* List styles for comic feel */
+.personal_table ul, .personal_table ol {
+  padding-left: 20px;
+}
+
+.personal_table li {
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.personal_table li::before {
+  content: "💥";
+  position: absolute;
+  left: -20px;
+}
+
+/* Links pop color */
+.personal_table a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.personal_table a:hover {
+  color: #ffcc00;
+  text-shadow: 2px 2px 0 #ff0000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .personal_header {
+    font-size: 38px;
+  }
+
+  .personal_table {
+    font-size: 14px;
+  }
+
+  .photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .personal_window {
+    padding: 15px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="personal_container">
+    <div class="personal_header">Personal Information</div>
+    <div class="personal_window">
+      <table class="personal_table">
+        <tr>
+          <td class="label">Name</td>
+          <td>Abdalla Nezar Elgaili Elshiekh</td>
+          <td class="photo" rowspan="5">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQGYD-inm7tQJg/profile-displayphoto-crop_800_800/B56ZmIkswTHQAI-/0/1758932947287?e=1763596800&v=beta&t=IG632KEuKrsnDp9tD_LVntId62Top_2UNb5K76io-p8" alt="Profile Photo">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Date of Birth</td>
+          <td>June 19, 2005</td>
+        </tr>
+        <tr>
+          <td class="label">Religion</td>
+          <td>Islam</td>
+        </tr>
+        <tr>
+          <td class="label">Race</td>
+          <td>Afro-Arab</td>
+        </tr>
+        <tr>
+          <td class="label">Address</td>
+          <td>
+            <strong>Street:</strong> Jalan Universiti 22<br>
+            <strong>Town:</strong> Parit Raja<br>
+            <strong>District:</strong> Batu Pahat<br>
+            <strong>State:</strong> Johor
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Contact</td>
+          <td colspan="2">
+            <strong>Mobile Phone:</strong> +60 177085967<br>
+            <strong>Social Media:</strong> 
+            <a href="https://www.linkedin.com/in/abdalla-elshiekh-49a241251/" target="_blank">@abdalla-elshiekh</a> | 
+            <strong>Github:</strong> 
+            <a href="https://github.com/ALNezar" target="_blank">ALNezar.github.io</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Course & Institution</td>
+          <td colspan="2">
+            Bachelor of Computer Science (Software Engineering) with Honours<br>
+            Faculty of Computer Science and Information Technology<br>
+            Universiti Tun Hussein Onn Malaysia (UTHM)
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Programming Skills</td>
+          <td colspan="2">
+            <ul>
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C & C++</li>
+              <li>React</li>
+              <li>Spring Boot</li>
+              <li>SQL</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Hobbies</td>
+          <td colspan="2">
+            <ul>
+              <li>Making YouTube videos</li>
+              <li>Digital Art & Animation</li>
+              <li>Grand Strategy Games (HOI4, CK3, VIC2)</li>
+              <li>Embedded Development Hobby</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">2025 Wishlist</td>
+          <td colspan="2">
+            <ol>
+              <li>Master Full-Stack Web Development & Embedded Programming</li>
+              <li>Contribute to Open Source Projects</li>
+              <li>Build a Personal Portfolio Website</li>
+              <li>Learn Embedded Development</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
