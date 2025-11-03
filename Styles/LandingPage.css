@@ -92,7 +92,7 @@
   overflow: hidden;
   cursor: pointer;
   
-  background-image: url("/Assets/Images/Dr House.jpg");
+  background-image: url("Assets/Images/Dr House.jpg");
   background-size: cover;
   background-position: center;
   
