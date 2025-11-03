@@ -1,134 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            background-color: gray;
-            height: 100vh;
-            width: 100%;
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: row;
-            background-color: aqua;
-            min-height: 100px;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .navigation {
-            display: flex;
-            flex-direction: row;
-            background-color: aqua;
-            min-height: 50px;
-            margin-top: 10px;
-            justify-content: space-between;
-            /* align-content: center; */
-            align-items: center;
-            
-        }
-
-        .navigation a {
-            text-decoration: none;
-        }
-
-        .header {
-            display: flex;
-            flex-direction: row;
-            min-height: 100px;
-            width: 100%;
-            background-color: aqua;
-            margin-top: 10px;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: row;
-            min-height: 300px;
-            background-color: red;
-            margin-top: 10px;
-            justify-content: space-between;
-          
-        }
-
-        .side_bar {
-            display: flex;
-            flex-direction: column;
-            background-color: aqua;
-            flex-basis: 20%;
-        }
-
-
-        .body_area {
-            display: flex;
-            flex-direction: column;
-            background-color: aqua;
-            flex-basis: 75%;
-        }
-
-        .footer {
-            display: flex;
-            flex-direction: row;
-            background-color: aqua;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-            min-height: 50px;
-        }
-
-
-    </style>
+    <title>AL Nezar (lab4)</title>
+    <link rel="stylesheet" href="/Styles/LandingPage.css">
 </head>
+
 <body>
     <div class="container">
-
         <div class="logo">
-            Logo
+            <img src="Assets/Images/flag - Copy.png" alt="my logo" width="80" height="80">
         </div>
+
+
 
         <div class="navigation">
-            <a href="">Home</a>
-            <a href="">Courses</a>
-            <a href="">Contact Us</a>
+            <a href="/NavigationLinks/bioData.html">Who am i?</a>
+            <a href="/NavigationLinks/hobbies.html">My hobbies!</a>
+            <a href="/NavigationLinks/campusLife.html">My Campus Life</a>
         </div>
+
+
 
         <div class="header">
-            <p>Header</p>
+            <p>Welcome to My Personal Website!</p>
         </div>
-
         <div class="content">
-
             <div class="side_bar">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, quia.
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/NavigationLinks/bioData.html">Biodata</a></li>
+                    <li><a href="/NavigationLinks/hobbies.html">Hobbies</a></li>
+                    <li><a href="/NavigationLinks/campusLife.html">Campus Life</a></li>
+                </ul>
+                <br>
+                <h3>About This Site</h3>
+                <p>This website showcases my personal information, interests, and university experiences.</p>
             </div>
 
             <div class="body_area">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam quisquam tempore id autem blanditiis.
+                <h2>Hello! Welcome to my personal space 👋</h2>
+                <p>Hi there! I'm Al Nezar, a student at the Faculty of Computer Science and Information Technology. This
+                    website is part of my Web Development (BIT21503) assignment where I get to share a bit about myself.
+                </p>
+                <br>
+                <h3>What you'll find here:</h3>
+                <p><strong>📋 Biodata:</strong> Learn more about who I am, my background, and my academic journey.</p>
+                <p><strong>🎯 Hobbies:</strong> Discover what I love to do in my free time and my personal interests.
+                </p>
+                <p><strong>🎓 Campus Life:</strong> Check out my university experiences, from programs and conferences
+                    to fun hangouts with friends!</p>
+                <br>
+                <p>Feel free to explore using the navigation links above. Enjoy your visit!</p>
             </div>
-
         </div>
-
 
         <div class="footer">
-            &copy Ariffin 2025
+            &copy; Al Nezar 2025 | BIT21503 Web Development Lab Assignment
         </div>
-   
-        
+
+
     </div>
 
-    
 </body>
+
 </html>
