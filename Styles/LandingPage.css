@@ -129,14 +129,14 @@
 
 /* Default image */
 .side_bar::before {
-  background-image: url("/Assets/Images/Dr House.jpg");
+  background-image: url("Assets/Images/Dr House.jpg");
   opacity: 1;
   transition: opacity 0s ease;
 }
 
 /* Hover image */
 .side_bar::after {
-  background-image: url("/Assets/Images/House giving death stair.webp");
+  background-image: url("Assets/Images/House giving death stair.webp");
   opacity: 0;
   transition: opacity 10s ease;
 }
