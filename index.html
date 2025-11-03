@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
- 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL Nezar (lab4)</title>
@@ -13,6 +13,8 @@
     <div class="container">
         <div class="logo">
             <img src="Assets/Images/flag - Copy.png" alt="my logo" width="80" height="80">
+                        <audio id="hoverSoundNav" src="/Assets/Audio/vintage-hip-hop-taunt.wav" preload="auto"></audio>
+
         </div>
 
 
@@ -21,20 +23,24 @@
             <a href="/NavigationLinks/bioData.html">Who am i?</a>
             <a href="/NavigationLinks/hobbies.html">My hobbies!</a>
             <a href="/NavigationLinks/campusLife.html">My Campus Life</a>
+            <audio id="hoverSoundNav" src="/Assets/Audio/vintage-hip-hop-taunt.wav" preload="auto"></audio>
         </div>
 
 
 
         <div class="header">
             <p>Welcome to My Personal Website!</p>
+                        <audio id="hoverSoundNav" src="/Assets/Audio/vintage-hip-hop-taunt.wav" preload="auto"></audio>
+
         </div>
         <div class="content">
-          <div class="side_bar"></div>
-
+            <div class="side_bar"></div>
+            <audio id="hoverSoundSideBar" src="/Assets/Audio/batman-song-1966.mp3" preload="auto"></audio>
             <div class="body_area">
                 <h2>Hello! Welcome </h2>
                 <p>HI!, I'm Al Nezar, a student at the Faculty of Computer Science and Information Technology.
-                    studying software engineerings This website is part of my Web Development (BIC21503) assignment where I get to share a bit about myself.
+                    studying software engineerings This website is part of my Web Development (BIC21503) assignment
+                    where I get to share a bit about myself.
                 </p>
                 <br>
                 <h3>What you'll find here:</h3>
@@ -56,7 +62,64 @@
 
 
     </div>
+    </style>
 
+    <script>
+        // Sidebar hover sound effect
+        const sidebar = document.querySelector('.side_bar');
+        const sound = document.getElementById('hoverSoundSideBar');
+
+        sidebar.addEventListener('mouseenter', () => {
+            sound.currentTime = 0; // restart from beginning
+            sound.play();
+        });
+
+        sidebar.addEventListener('mouseleave', () => {
+            sound.pause(); // stop sound
+            sound.currentTime = 0; // reset position
+        });
+
+        // Navigation links hover sound effect
+        const navLinks = document.querySelectorAll('.navigation a');
+        const hoverSound = document.getElementById('hoverSoundNav');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                hoverSound.currentTime = 0; // restart from beginning
+                hoverSound.play();
+            });
+
+            link.addEventListener('mouseleave', () => {
+                hoverSound.pause(); // stop sound
+                hoverSound.currentTime = 0; // reset position
+            });
+        });
+
+        // Logo hover animation
+      const logo = document.querySelector('.logo img');
+
+        logo.addEventListener('mouseenter', () => {
+            logo.style.transition = 'transform 0.3s ease';
+            logo.style.transform = 'scale(1.2) rotate(-3deg)';
+        });
+
+        logo.addEventListener('mouseleave', () => {
+            logo.style.transform = 'scale(1) rotate(0deg)';
+        });
+
+        // Footer current year update
+        const footer = document.querySelector('.footer');
+        const currentYear = new Date().getFullYear();
+        footer.innerHTML = `&copy; Al Nezar ${currentYear} | BIT21503 Web Development Lab Assignment`;
+
+        //header hover sound effect
+        const header = document.querySelector('.header');
+        const headerSound = document.getElementById('hoverSoundNav');
+        header.addEventListener('mouseenter', () => {
+            headerSound.currentTime = 0; // restart from beginning
+            headerSound.play();
+        });
+
+    </script>
 </body>
 
 </html>

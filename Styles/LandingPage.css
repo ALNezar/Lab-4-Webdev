@@ -88,23 +88,78 @@
      gap: 20px;
  }
 
- .side_bar {
-     width: 355px;
-     height: 302px;
-     background-image: url("/Assets/Images/Dr House.jpg");
-     background-size: cover;
-     background-position: center;
-     border-radius: 10px;
-     transition: transform 0.3s ease, background-image 0.3s ease;
-     cursor: pointer;
-     
- }
+.side_bar {
+  position: relative;
+  width: 355px;
+  height: 302px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: url("/Assets/Images/Dr House.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease; /* controls return-to-normal speed */
+}
 
- /* Hover = “if hovered” */
- .side_bar:hover {
-     transform: scale(1.05);
-     background-image: url("/Assets/Images/House giving death stair.webp");
- }
+/* When hovered → spin once */
+.side_bar:hover {
+  animation: spinOnce 2.3s ease;
+}
+
+/* Define the spin animation */
+@keyframes spinOnce {
+  
+  50% {
+    transform: rotate(360deg) scale(1.2); /* wheel spin + zoom */
+  }
+  1
+}
+
+
+/* Both layers fill the sidebar */
+.side_bar::before,
+.side_bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 5s ease; /* fade-in speed */
+    
+}
+
+/* Default: before is visible */
+.side_bar::before {
+    background-image: url("/Assets/Images/Dr House.jpg");
+    opacity: 1;
+    
+}
+
+/* Hover image starts invisible */
+.side_bar::after {
+    background-image: url("/Assets/Images/House giving death stair.webp");
+    opacity: 0;
+    
+}
+
+/* Hover: fade in slowly */
+.side_bar:hover::after {
+    opacity: 1;
+    transition: opacity 10s ease; /* fade-in duration */
+    
+}
+
+/* Hover: fade out the old one */
+.side_bar:hover::before {
+    opacity: 0;
+    
+}
+
+/* When hover ends: instantly disappear (no fade-out) */
+.side_bar::after {
+    transition: opacity 0s ease; /* overrides back to instant when unhovered */
+}
+
 
  /* SIDE BAR */
 
