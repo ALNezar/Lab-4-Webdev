@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies!</title>
+    <link rel="stylesheet" href="/Styles/Hobbies.css">
+    <style>
+        /* Basic page setup */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            margin: 20px 0;
+        }
+
+        nav {
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hobby-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* full viewport height per hobby */
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .hobby-section img {
+            max-width: 500px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #000;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+
+        .image-description {
+            font-style: italic;
+            color: #aaa;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="logo">
+            <img src="../Assets/Images/flag - Copy.png" alt="my logo">
+        </div>
+
+        <nav>
+            <a href="NavigationLinks/bioData.html">Who am I?</a>
+            <a href="/index.html">Main page</a>
+            <a href="NavigationLinks/campusLife.html">My Campus Life</a>
+            <audio id="hoverSoundNav" src="../Assets/Audio/vintage-hip-hop-taunt.wav" preload="auto"></audio>
+        </nav>
+
+        <!-- HOBBY 1: Digital Art -->
+        <section class="hobby-section">
+            <h1>My Hobbies!</h1>
+            <h2>Digital Art</h2>
+            <img src="../Assets/Images/BattleRat.PNG" alt="Digital Art">
+            <p class="image-description">Picture of a fighter rat I drew in Photoshop using my digital tablet</p>
+            <p>I love art! It is my main driver and primary motive in life. It drives every facet of my work, and I try to tie and relate everything I do to it.</p>
+        </section>
+
+        <!-- HOBBY 2: Embedded Development -->
+        <section class="hobby-section">
+            <h2>Embedded Development</h2>
+            <img src="../Assets/Images/Emd.jpg" alt="Embedded Development">
+            <p>I enjoy working with microcontrollers like ESP32, creating smart devices, and building IoT projects that connect software with  hardware allways intersets me.</p>
+        </section>
+
+        <!-- HOBBY 3: YouTube & Content Creation -->
+        <section class="hobby-section">
+            <h2>Making YouTube Videos</h2>
+            <p>Creating videos allows me to combine storytelling, editing, and visuals to share ideas, tutorials, and entertainment with an audience.</p>
+        </section>
+
+        <!-- HOBBY 4: Grand Strategy Games -->
+        <section class="hobby-section">
+            <h2>Grand Strategy Games</h2>
+            <img src="../Assets/Images/hoi4.webp" alt="Grand Strategy Games" width="999" height="999">
+            <p class="image-description">Screenshot from Hearts of Iron IV showing strategic gameplay and map interface</p>
+            <p>Three words: HOI4, CK3, and VIC2... I am addicted!</p>
+        </section>
+    </main>
+
+    <script>
+        // Navigation hover sound effect
+        const hoverSoundNav = document.getElementById('hoverSoundNav');
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                hoverSoundNav.currentTime = 0;
+                hoverSoundNav.play();
+            });
+        });
+    </script>
+</body>
+
+</html>

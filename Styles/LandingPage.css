@@ -35,13 +35,12 @@
 /* NAVIGATION BAR */
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   background-color: #000;
-  color: white;
   padding: 12px 0;
   font-family: 'Chubby Relief', sans-serif;
-  gap: 183px;
+  gap: 50px; 
 }
 
 .navigation a {
