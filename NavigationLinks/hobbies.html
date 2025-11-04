@@ -43,12 +43,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh; /* full viewport height per hobby */
+            min-height: 100vh;
+            /* full viewport height per hobby */
             justify-content: center;
             padding: 40px;
             text-align: center;
             border-bottom: 1px solid #333;
         }
+
+        .hobby-section :hover {
+            text-decoration: none;
+            font-size: 50px;
+            transition: transform 0.4s, color 0.32s;
+        }
+
+        
 
         .hobby-section img {
             max-width: 500px;
@@ -58,6 +67,10 @@
             box-shadow: 0 0 15px #000;
         }
 
+        .hobby-section img:hover {
+            transform: scale(1.2) rotate(-3deg);
+
+        }
         h1 {
             font-size: 3em;
             margin-bottom: 20px;
@@ -101,27 +114,30 @@
             <h2>Digital Art</h2>
             <img src="../Assets/Images/BattleRat.PNG" alt="Digital Art">
             <p class="image-description">Picture of a fighter rat I drew in Photoshop using my digital tablet</p>
-            <p>I love art! It is my main driver and primary motive in life. It drives every facet of my work, and I try to tie and relate everything I do to it.</p>
+            <p>I love art! It is my main driver and primary motive in life. It drives every facet of my work, and I try
+                to tie and relate everything I do to it.</p>
         </section>
 
         <!-- HOBBY 2: Embedded Development -->
         <section class="hobby-section">
             <h2>Embedded Development</h2>
             <img src="../Assets/Images/Emd.jpg" alt="Embedded Development">
-            <p>I enjoy working with microcontrollers like ESP32, creating smart devices, and building IoT projects that connect software with  hardware allways intersets me.</p>
+            <p>I love tinkering with microcontrollers like the ESP32 and building smart devices. There's something really cool about IoT projects where you get to connect software and hardware together , that stuff always gets me excited.</p>
         </section>
 
         <!-- HOBBY 3: YouTube & Content Creation -->
         <section class="hobby-section">
             <h2>Making YouTube Videos</h2>
-            <p>Creating videos allows me to combine storytelling, editing, and visuals to share ideas, tutorials, and entertainment with an audience.</p>
+            <p>Creating videos allows me to combine storytelling, editing, and visuals to share ideas, tutorials, and
+                entertainment with an audience.</p>
         </section>
 
         <!-- HOBBY 4: Grand Strategy Games -->
         <section class="hobby-section">
             <h2>Grand Strategy Games</h2>
             <img src="../Assets/Images/hoi4.webp" alt="Grand Strategy Games" width="999" height="999">
-            <p class="image-description">Screenshot from Hearts of Iron IV showing strategic gameplay and map interface</p>
+            <p class="image-description">Screenshot from Hearts of Iron IV showing strategic gameplay and map interface
+            </p>
             <p>Three words: HOI4, CK3, and VIC2... I am addicted!</p>
         </section>
     </main>
